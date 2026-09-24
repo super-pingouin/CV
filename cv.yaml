@@ -1,15 +1,15 @@
 cv:
-  name: John Doe
+  name: Yémalin AWHANSOU
   headline: Applied Scientist Internship
   location: Palaiseau, 91120
   email: john.doe@email.com
-  photo: null
-  phone: +33-6-12-34-56-78
+  photo: "photos/images.jpg"
+  phone: "+33-6-00-00-00-01"
   social_networks:
   - network: LinkedIn
-    username: . [link](https://example.com)
+    username: yémalin-awhansou
   - network: GitHub
-    username: . [github](https://example.com)
+    username: super-pingouin
   custom_connections: null
   sections:
     summary:

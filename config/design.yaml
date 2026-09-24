@@ -48,7 +48,7 @@ design:
     show_external_link_icon: false
   header:
     alignment: center
-    photo_width: 3.5cm
+    photo_width: 1.4cm
     photo_position: left
     photo_space_left: 0.4cm
     photo_space_right: 0.4cm
