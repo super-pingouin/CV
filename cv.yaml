@@ -1,0 +1,98 @@
+cv:
+  name: John Doe
+  headline: Applied Scientist Internship
+  location: Palaiseau, 91120
+  email: john.doe@email.com
+  photo: images.jpg
+  phone: "+33-6-12-34-56-78"
+  social_networks:  
+    - network: LinkedIn
+      username: . [link](https://example.com)
+    - network: GitHub 
+      username: . [github](https://example.com)
+  custom_connections:
+  sections:
+    summary:
+      - As an engineer from École Centrale de Lille and currently a Master’s student in Data Science at the Institut Polytechnique, I am seeking a final-year internship starting in April 2026 in R&D within the fields of data science and AI.
+    education:
+      - company: Institut Polytechnique de Paris
+        position: M.Sc. Data Science
+        start_date: 2026-09
+        end_date: present
+        location: Palaiseau
+        summary: Advanced AI for text and graphs, Hidden Markov Models, Generative Models, Optimal Transport, Representation Learning,Medical Imaging, Online learning and aggregation 
+      - company: École Centrale de Lille
+        position: M.Eng. Data Science & AI (Major), Research Track (Minor) 
+        start_date: 2022-09
+        end_date: 2026-09
+        location: Villeneuve d'Ascq
+        summary: Statistical learning, Frequentist and Bayesian estimation, Machine Learning, Deep Learning, Monte Carlo methods, Markov chains, Computer Vision, Reinforcement Learning
+      - company: Université de Lille
+        position: M.Sc. Mathematics
+        start_date: 2025-09
+        end_date: 2026-09
+        location: Villeneuve d'Ascq
+        summary: Stochastic processes, Brownian motion, Martingales, Itô's formula, Topology, Complex measure, Determinantal point processes (DPP)
+      - company: EPFL
+        position: Academic exchange semester in Master Data Science
+        start_date: 2025-02
+        end_date: 2025-07
+        location: Lausanne, Suisse
+        summary: Statistics, Optimization, Natural Language Processing (NLP), Large Language Model (LLM), RAG, Big Data, Network Machine Learning. 
+      - company: Lycée Marcelin Berthelot
+        position: CPGE MPSI-MP
+        start_date: 2020-09
+        end_date: 2022-09
+        location: Saint-Maur-des-Fossés
+        summary: Intensive undergraduate preparation course specialised in maths and physics.
+        highlights:
+    experience:
+      - company: BNP Paribas Cardif
+        position: Data Scientist
+        start_date: 2026-04
+        end_date: 2026-09
+        location: Nanterre
+        highlights: 
+          - Analysis of insurance products ADE CR 
+          - Improvement of a performance tracking report pipeline, and reduction of the output dataset size by a factor of up to 7.
+      - company: Quicksign
+        position: Data Analyst / Analytics Engineer
+        start_date: 2024-09
+        end_date: 2025-02
+        location: Paris
+        highlights:
+          - Improvement of an ETL pipeline of around 30 steps, creation of dashboards
+          - Study of an anti-fraud algorithm.
+      - company: IEMN
+        position: Research Assistant
+        start_date: 2024-02
+        end_date: 2024-07
+        location: Villeneuve d'Ascq 
+        highlights: 
+          - Study of acoustic wave sensors, graphical interface for measurement automation.
+    projects:
+      - name: M.Sc. Thesis Project (CRIStAL laboratory)
+        start_date: 2025-10
+        end_date: 2026-09
+        highlights:
+          - Exploring Bayesian and Neyman-Pearson Frameworks for Quantum Hypothesis Testing 
+          - Study of the Helstrom and quantum Chernoff bounds
+      - name: Group Engineering Project Drug Iatrogenics (École Centrale de Lille)
+        start_date: 2022-09
+        end_date: 2024-02
+        highlights:
+          - Development of an AI model to fight against drug-induced iatrogenics based on granular computing 
+          - Study of a MIMIC database containing clinical data from over 40,000 patients.
+    skills:
+      - label: Programming
+        details: Python, C, SQL, Java, OCaml
+      - label: Frameworks
+        details: NumPy, Pandas, TensorFlow, PyTorch, PySpark, Scikit-learn, SciPy
+      - label: Tech stack
+        details: Git, Docker, PostgreSQL, dbt, MySQL, MongoDB, Metabase, Tableau
+      - label: Languages
+        details: French (Native), English (B2, TOEIC - 920), Spanish (A2)
+      - label: Soft skills
+        details:  Friendly, Dynamic, Team spirit, Motivated, Analytical skills, Rigour, Adaptability, Well-organized, Curiosity
+      - label: Personal Interests
+        details: Sports (Basket-Ball, Football, Volleyball, Running), Cinema (Thriller, Drama, Science-fiction), Japanese anime, Video game universe, Board games, New technologies
