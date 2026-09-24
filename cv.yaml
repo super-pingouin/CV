@@ -3,7 +3,7 @@ cv:
   headline: Applied Scientist Internship
   location: Palaiseau, 91120
   email: john.doe@email.com
-  photo: images.jpg
+  photo: 
   phone: "+33-6-12-34-56-78"
   social_networks:  
     - network: LinkedIn

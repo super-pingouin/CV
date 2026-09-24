@@ -1,0 +1,8 @@
+# Rendu et fichiers temporaires
+rendercv_output/
+full_cv.yaml
+
+# Python
+__pycache__/
+*.pyc
+.venv/
