@@ -3,8 +3,8 @@ cv:
   headline: Applied Scientist Internship
   location: Palaiseau, 91120
   email: john.doe@email.com
-  photo: "photos/photo.jpg"
-  phone: "+33-6-00-00-00-01"
+  photo: photos/images.jpg
+  phone: +33-6-00-00-00-01
   social_networks:
   - network: LinkedIn
     username: yémalin-awhansou
@@ -160,7 +160,7 @@ design:
     show_external_link_icon: false
   header:
     alignment: center
-    photo_width: 3.5cm
+    photo_width: 1.4cm
     photo_position: left
     photo_space_left: 0.4cm
     photo_space_right: 0.4cm
@@ -282,3 +282,7 @@ locale:
   - October
   - November
   - December
+settings:
+  current_date: today
+  bold_keywords: []
+  pdf_title: NAME - CV
