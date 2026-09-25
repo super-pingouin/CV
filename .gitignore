@@ -1,5 +1,9 @@
 # Rendu et fichiers temporaires
 build/
+rendercv_output/
+
+# Fichiers privés
+private/
 
 # Python
 __pycache__/

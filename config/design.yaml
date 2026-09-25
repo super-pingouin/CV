@@ -31,7 +31,7 @@ design:
       body: 10pt
       name: 20pt
       headline: 10pt
-      connections: 9.5pt
+      connections: 9pt
       section_titles: 1.3em
     small_caps:
       name: false
@@ -61,7 +61,7 @@ design:
       show_icons: true
       display_urls_instead_of_usernames: false
       separator: ''
-      space_between_connections: 0.5cm
+      space_between_connections: 0.3cm
   section_titles:
     type: with_partial_line
     line_thickness: 0.5pt

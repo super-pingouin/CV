@@ -3,6 +3,19 @@ import yaml
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageOps
 
+def deep_merge(target, source) :
+    """
+    Fusionne récursivement le dictionnaire `source` dans `target`.
+    Permet de modifier certaines clés privés (ex: cv.phone, cv.email)
+    sans écraser l'ensemble du bloc ou des sous-dictionnaires.
+    """
+    for key, value in source.items():
+        if isinstance(value, dict) and key in target and isinstance(target[key], dict):
+            deep_merge(target[key], value)
+        else:
+            target[key] = value
+    return target
+
 
 def prepare_photo(src, dst, taille=600, forme="cercle"):
     """ Recentre la photo original en carré centré et change sa forme en carré, cercle ou arrondi
@@ -44,21 +57,28 @@ FILES_TO_MERGE = [
     BASE_DIR / "cv.yaml",
     BASE_DIR / "config" / "design.yaml",
     BASE_DIR / "config" / "locale.yaml",
-    BASE_DIR / "config" / "settings.yaml",
+    BASE_DIR / "config" / "settings.yaml"
 ]
 
 full_data = {}
 
-# Chargement et fusion des fichiers YAML
+# Chargement et fusion des fichiers YAML publics
 for file_path in FILES_TO_MERGE:
     if file_path.exists():
         with open(file_path, "r", encoding="utf-8") as f:
             full_data |= yaml.safe_load(f) or {}
 
+# Fusion du fichier yaml unifié avec les données secrètes dans secrets.yaml s'il y en a
+secrets_path = BASE_DIR / "private" / "secrets.yaml"
+if secrets_path.exists():
+    with open(secrets_path, "r", encoding="utf-8") as f:
+        secrets_data = yaml.safe_load(f) or {}
+        deep_merge(full_data, secrets_data)
 
 # Si on met une photo, on utilise l'image recentrée de la photo
 cv = full_data.get("cv")
 original_photo = cv.get("photo")
+print(original_photo)
 if original_photo:
     src = BASE_DIR / original_photo
     dst = BUILD_DIR / f"{src.stem}_carre.png"
