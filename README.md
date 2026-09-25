@@ -88,7 +88,7 @@ Le fichier PDF final sera compilé et enregistré dans le dossier `build/render_
 Modifiez ces fichiers pour adapter le rendu sans toucher au contenu du CV lui-même (`cv.yaml`).
 
 ### 🖼️ Forme de la photo de profil
-Le script `generer_cv.py` ajuste automatiquement la photo déclarée dans `photo`. Vous pouvez modifier le paramètre `forme` de la fonction `prepare_photo()` directement dans le script pour changer le rendu :
+Le script `create_cv.py` ajuste automatiquement la photo déclarée dans `photo`. Vous pouvez modifier le paramètre `forme` de la fonction `prepare_photo()` directement dans le script pour changer le rendu :
 * `"cercle"` *(par défaut)* : découpe la photo en rond.
 * `"arrondi"` : conserve un carré aux coins adoucis.
 * `"carre"` : conserve l'image au format carré brut.
