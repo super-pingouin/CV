@@ -78,7 +78,6 @@ if secrets_path.exists():
 # Si on met une photo, on utilise l'image recentrée de la photo
 cv = full_data.get("cv")
 original_photo = cv.get("photo")
-print(original_photo)
 if original_photo:
     src = BASE_DIR / original_photo
     dst = BUILD_DIR / f"{src.stem}_carre.png"
