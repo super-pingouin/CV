@@ -1,6 +1,6 @@
 # Générateur de CV avec RenderCV — Données sécurisées
 
-Ce projet permet de générer un CV au format PDF basé sur **RenderCV**. Il permet de conserver le code source et la structure sur GitHub tout en gardant certaines données confidentielles (email, téléphone, photo) en local.
+Ce projet permet de générer un CV au format PDF basé sur **RenderCV**. Il permet de conserver le code source et la structure sur GitHub tout en gardant certaines données confidentielles (email, téléphone, photo) en local. Il permet également de changer la forme de la photo du CV, par défaut la forme est circulaire.
 
 ---
 
@@ -74,7 +74,7 @@ Toutes les clés spécifiées dans ce fichier remplaceront automatiquement les v
 python create_cv.py
 ```
 
-Le fichier PDF final sera compilé et enregistré dans le dossier `build/`.
+Le fichier PDF final sera compilé et enregistré dans le dossier `build/render_cv_output`.
 
 ---
 
@@ -88,8 +88,9 @@ Le fichier PDF final sera compilé et enregistré dans le dossier `build/`.
 
 Modifiez ces fichiers pour adapter le rendu sans toucher au contenu du CV lui-même (`cv.yaml`).
 
+### 🖼️ Forme de la photo de profil
+Le script `generer_cv.py` ajuste automatiquement la photo déclarée dans `photo`. Vous pouvez modifier le paramètre `forme` de la fonction `prepare_photo()` directement dans le script pour changer le rendu :
+* `"cercle"` *(par défaut)* : découpe la photo en rond.
+* `"arrondi"` : conserve un carré aux coins adoucis.
+* `"carre"` : conserve l'image au format carré brut.
 ---
-
-## 📄 Licence
-
-Précisez ici la licence du projet (ex. MIT, GPL, ou « Usage personnel »).
