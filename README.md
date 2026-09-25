@@ -1,4 +1,4 @@
-# Générateur de CV avec RenderCV — Choix des données sécurisées
+# Générateur de CV avec RenderCV — Données sécurisées
 
 Ce projet permet de générer un CV au format PDF basé sur **RenderCV**. Il permet de conserver le code source et la structure sur GitHub tout en gardant certaines données confidentielles au choix (email, téléphone, photo) en local. Il permet également de changer la forme de la photo du CV, par défaut la forme est circulaire.
 
