@@ -46,7 +46,6 @@ Ce projet permet de générer un CV au format PDF basé sur **RenderCV**. Il per
    ```bash
    pip install -r requirements.txt
    ```
-   *(ou `pip install rendercv pyyaml` si le projet n'utilise pas de fichier `requirements.txt`)*
 
 ---
 
