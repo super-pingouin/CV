@@ -13,7 +13,7 @@ cv:
   custom_connections: null
   sections:
     summary:
-    - As an engineering graduate from École Centrale de Lille and currently a Data Science Master's student at Institut Polytechnique de Paris, I am seeking a final-year internship starting in 
+    - As an engineering graduate from École Centrale de Lille and currently a Data Science Master's student at Institut Polytechnique de Paris, I am seeking a 4-to-6-month final-year internship starting in 
       April 2027 in R&D within the fields of data science and AI.
       
     education:
@@ -22,21 +22,21 @@ cv:
       start_date: 2026-09
       end_date: present
       location: Palaiseau
-      summary: Advanced AI for text and graphs, Hidden Markov Models, Generative Models, Optimal Transport, Representation Learning, Medical Imaging, Online learning and aggregation
+      summary: Advanced AI for text and graphs, Hidden Markov Models, Generative Models, Optimal Transport, Representation Learning, Medical Imaging, Online learning and aggregation.
     - company: Université de Lille 
       position: M.Sc. Mathematics (Double degree)
       start_date: 2025-09
       end_date: 2026-09
       location: Villeneuve d'Ascq
       summary: Stochastic processes, Brownian motion, Martingales, Itô's formula,
-        Topology, Complex measure, Determinantal point processes (DPP)
+        Topology, Complex measure, Determinantal point processes (DPP).
     - company: École Centrale de Lille
       position: M.Eng. Data Science & AI (Major), Research Track (Minor)
       start_date: 2022-09
       end_date: 2026-09
       location: Villeneuve d'Ascq
       summary: Statistical learning, Frequentist and Bayesian estimation, Machine
-        Learning, Deep Learning, Monte Carlo methods, Markov chains, Computer Vision, Reinforcement Learning
+        Learning, Deep Learning, Monte Carlo methods, Markov chains, Computer Vision, Reinforcement Learning.
     - company: EPFL
       position: Academic exchange semester in Master Data Science
       start_date: 2025-02
@@ -66,7 +66,7 @@ cv:
       end_date: 2025-02
       location: Paris
       highlights:
-      - Improved a dbt ETL pipeline of around 30 steps, created performance dashboards
+      - Improved a dbt ETL pipeline of around 30 steps, created performance dashboards.
       - Studied a graph-based fraud detection algorithm.
     - company: IEMN
       position: Research Assistant
@@ -76,18 +76,18 @@ cv:
       highlights:
       - Conducted research on acoustic wave sensors, improved a GUI for measurement automation.
     projects:
-    - name: M.Sc. Mathematics Master Thesis Quantum Hypothesis Testing (CRIStAL laboratory)
+    - name: M.Sc. in Mathematics Master's Thesis - Quantum Hypothesis Testing (CRIStAL Laboratory)
       start_date: 2025-10
       end_date: 2026-09
       highlights:
-      - Explored Bayesian and Neyman-Pearson frameworks for quantum hypothesis testing
-      - Investigated Helstrom and quantum Chernoff for optimal error in quantum state discrimination
+      - Explored Bayesian and Neyman-Pearson frameworks for quantum hypothesis testing.
+      - Investigated Helstrom and quantum Chernoff for optimal error in quantum state discrimination.
       - Co-authored a research paper on circular quantum state (in internal review for ICASSP 2027).
-    - name: Group Engineering Project Drug Iatrogenics (École Centrale de Lille)
+    - name: Group Engineering Project - Drug Iatrogenics (École Centrale de Lille)
       start_date: 2022-09
       end_date: 2024-02
       highlights:
-      - Developed an AI model based on granular computing to mitigate drug-induced iatrogenesis 
+      - Developed an AI model based on granular computing to mitigate drug-induced iatrogenesis. 
       - Studied the MIMIC-III database containing clinical data from over 40,000 patients.
     skills:
     - label: Programming
