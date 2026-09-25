@@ -1,11 +1,12 @@
 # Générateur de CV avec RenderCV — Données sécurisées
 
-Ce promet permet de générer un CV au format PDF basé sur **RenderCV**. Il permet de conserver le code source et la structure sur GitHub tout en gardant certaines données confidentielles (email, téléphone, photo) en local.
+Ce projet permet de générer un CV au format PDF basé sur **RenderCV**. Il permet de conserver le code source et la structure sur GitHub tout en gardant certaines données confidentielles (email, téléphone, photo) en local.
 
 ---
 
 ## 📁 Architecture du projet
 
+```
 .
 ├── cv.yaml               # CV public
 ├── config/
@@ -13,30 +14,82 @@ Ce promet permet de générer un CV au format PDF basé sur **RenderCV**. Il per
 │   ├── locale.yaml       # Langue des intitulés
 │   └── settings.yaml     # Paramètres de build (dossier de sortie)
 ├── private/              # 🔒 Dossier ignoré par Git (Données strictement locales)
-│   ├── secrets.yaml      # Champs privées (email, téléphone)
-│   └── photo.jpg         # Photo personnelle
+│   ├── secrets.yaml      # Champs privés (email, téléphone)
+│   └── photo.jpg          # Photo personnelle
 ├── build/                # Artefacts générés (PDF, LaTeX)
-├── create_cv.py         # Script Python de fusion et de compilation
-├── .gitignore            # Masque les dossier private/ et build/
+├── create_cv.py           # Script Python de fusion et de compilation
+├── .gitignore             # Masque les dossiers private/ et build/
 └── README.md
+```
 
+---
 
-🔒 Configuration du fichier private/secrets.yaml
+## ✅ Prérequis
 
-Pour ajouter ou masquer uniquement vos coordonnées personnelles, créez le fichier private/secrets.yaml :
+- Python 3.9 ou supérieur
 
+## 📦 Installation
+
+1. Cloner le dépôt :
+   ```bash
+   git clone https://github.com/super-pingouin/CV.git
+   cd CV
+   ```
+
+2. Créer un environnement virtuel (recommandé) :
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # Sous Windows : venv\Scripts\activate
+   ```
+
+3. Installer les dépendances :
+   ```bash
+   pip install -r requirements.txt
+   ```
+   *(ou `pip install rendercv pyyaml` si le projet n'utilise pas de fichier `requirements.txt`)*
+
+---
+
+## 🔒 Configuration du fichier `private/secrets.yaml`
+
+Pour ajouter ou masquer uniquement vos coordonnées personnelles, créez le fichier `private/secrets.yaml` :
+
+```yaml
 cv:
   email: mon.email.prive@example.com
   phone: "+33 6 12 34 56 78"
   location: Paris, France
   photo: private/photo.jpg
+```
 
+Toutes les clés spécifiées dans ce fichier remplaceront automatiquement les valeurs correspondantes de `cv.yaml` lors de l'exécution de `create_cv.py`.
 
-Toutes les clés spécifiées dans ce fichier remplaceront automatiquement les valeurs correspondantes de cv.yaml lors de l'exécution de generer_cv.py.
+> ⚠️ Ce fichier n'est jamais versionné : il est explicitement listé dans `.gitignore`. Vous pouvez donc versionner `cv.yaml` avec des valeurs génériques ou vides pour ces champs, en toute sécurité.
 
-⚙️ Exécution en local
+---
 
+## ⚙️ Exécution en local
+
+```bash
 python create_cv.py
+```
 
+Le fichier PDF final sera compilé et enregistré dans le dossier `build/`.
 
-Le fichier PDF final sera compilé et enregistré dans le dossier build/.
+---
+
+## 🎨 Personnalisation
+
+| Fichier | Rôle |
+|---|---|
+| `config/design.yaml` | Polices, marges, couleurs, mise en page générale du CV |
+| `config/locale.yaml` | Langue des intitulés (ex. « Expérience », « Formation ») |
+| `config/settings.yaml` | Paramètres de build (dossier de sortie, options de compilation) |
+
+Modifiez ces fichiers pour adapter le rendu sans toucher au contenu du CV lui-même (`cv.yaml`).
+
+---
+
+## 📄 Licence
+
+Précisez ici la licence du projet (ex. MIT, GPL, ou « Usage personnel »).
