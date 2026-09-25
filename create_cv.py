@@ -56,7 +56,7 @@ for file_path in FILES_TO_MERGE:
             full_data |= yaml.safe_load(f) or {}
 
 
-# Recentre la photo original et remplace l'image dans le YAML fusionné
+# Si on met une photo, on utilise l'image recentrée de la photo
 cv = full_data.get("cv")
 original_photo = cv.get("photo")
 if original_photo:
