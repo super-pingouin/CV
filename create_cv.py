@@ -1,7 +1,9 @@
+import argparse
 import subprocess
 import yaml
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageOps
+
 
 def deep_merge(target, source) :
     """
@@ -46,46 +48,66 @@ def prepare_photo(src, dst, taille=600, forme="cercle"):
         sortie.save(dst)
     return dst
 
-# Répertoires dynamiques
-BASE_DIR = Path(__file__).resolve().parent
-BUILD_DIR = BASE_DIR / "build"
-BUILD_DIR.mkdir(exist_ok=True)
-FULL_CV_PATH = BUILD_DIR / "full_cv.yaml"
 
-# Fichiers YAML à charger et fusionner dans l'ordre
-FILES_TO_MERGE = [
-    BASE_DIR / "cv.yaml",
-    BASE_DIR / "config" / "design.yaml",
-    BASE_DIR / "config" / "locale.yaml",
-    BASE_DIR / "config" / "settings.yaml"
-]
+def generer_cv(lang: str, base_dir: Path, build_dir: Path):
+    """ Génère un cv dans le dossier build_dir en fonction de la langue choisie 
+    à partir des documents présents dans base_dir."""
 
-full_data = {}
+    full_cv_path = build_dir / f"full_cv_{lang}.yaml"
 
-# Chargement et fusion des fichiers YAML publics
-for file_path in FILES_TO_MERGE:
-    if file_path.exists():
-        with open(file_path, "r", encoding="utf-8") as f:
-            full_data |= yaml.safe_load(f) or {}
+    # Fichiers YAML à charger et fusionner selon la langue choisie
+    files_to_merge = [
+        base_dir / f"{lang}_cv.yaml",
+        base_dir / "config" / f"{lang}_design.yaml",
+        base_dir / "config" / f"{lang}_locale.yaml",
+        base_dir / "config" / f"{lang}_settings.yaml",
+    ]
 
-# Fusion du fichier yaml unifié avec les données secrètes dans secrets.yaml s'il y en a
-secrets_path = BASE_DIR / "private" / "secrets.yaml"
-if secrets_path.exists():
-    with open(secrets_path, "r", encoding="utf-8") as f:
-        secrets_data = yaml.safe_load(f) or {}
-        deep_merge(full_data, secrets_data)
+    full_data = {}
 
-# Si on met une photo, on utilise l'image recentrée de la photo
-cv = full_data.get("cv")
-original_photo = cv.get("photo")
-if original_photo:
-    src = BASE_DIR / original_photo
-    dst = BUILD_DIR / f"{src.stem}_carre.png"
-    cv["photo"] = str(prepare_photo(src, dst).resolve())
+    # Chargement et fusion des fichiers YAML publics
+    for file_path in files_to_merge:
+        if file_path.exists():
+            with open(file_path, "r", encoding="utf-8") as f:
+                full_data |= yaml.safe_load(f) or {}
 
-# Sauvegarde dans le dossier build
-with open(FULL_CV_PATH, "w", encoding="utf-8") as f:
-    yaml.dump(full_data, f, allow_unicode=True, sort_keys=False)
+    # Fusion du fichier yaml unifié avec les données secrètes dans secrets.yaml s'il y en a
+    secrets_path = base_dir / "private" / "secrets.yaml"
+    if secrets_path.exists():
+        with open(secrets_path, "r", encoding="utf-8") as f:
+            secrets_data = yaml.safe_load(f) or {}
+            deep_merge(full_data, secrets_data)
 
-# Exécute RenderCV depuis le répertoire BUILD_DIR
-subprocess.run(["rendercv", "render", str(FULL_CV_PATH)], cwd=BUILD_DIR, check=True)
+    # Si on met une photo, on utilise l'image recentrée de la photo
+    cv = full_data.get("cv", {})
+    original_photo = cv.get("photo")
+    if original_photo:
+        src = base_dir / original_photo
+        if src.exists():
+            dst = build_dir / f"{src.stem}_carre.png"
+            cv["photo"] = str(prepare_photo(src, dst).resolve())
+
+    # Sauvegarde dans le dossier build
+    with open(full_cv_path, "w", encoding="utf-8") as f:
+        yaml.dump(full_data, f, allow_unicode=True, sort_keys=False)
+
+    # Exécute RenderCV depuis le répertoire build_dir
+    subprocess.run(["rendercv", "render", str(full_cv_path)], cwd=build_dir, check=True)
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Générateur de CV multilingue")
+    parser.add_argument("--lang", choices=["fr", "en"], default="fr", help="Langue à générer")
+    parser.add_argument("--all", action="store_true", help="Générer FR et EN")
+    args = parser.parse_args()
+
+    # Répertoires dynamiques
+    base_dir = Path(__file__).resolve().parent
+    build_dir = base_dir / "build"
+    build_dir.mkdir(exist_ok=True)
+
+    if args.all:
+        for l in ["fr", "en"]:
+            generer_cv(l, base_dir, build_dir)
+    else:
+        generer_cv(args.lang, base_dir, build_dir)

@@ -1,0 +1,99 @@
+cv:
+  name: Yémalin AWHANSOU
+  headline: Applied Scientist Internship
+  location: Palaiseau, 91120
+  email: john.doe@email.com
+  phone: "+33-6-00-00-00-01"
+  social_networks:
+  - network: LinkedIn
+    username: yémalin-awhansou
+  - network: GitHub
+    username: super-pingouin
+  custom_connections: null
+  sections:
+    résumé:
+    - Ingénieur diplômé de l'École Centrale de Lille et actuellement étudiant au master Data Science de l'Institut Polytechnique de Paris, je suis à la recherche d'un stage de fin d'études de 4 à 6 mois à partir d'avril 2027 en R&D en IA et en data science.
+      
+    formation:
+    - company: Institut Polytechnique de Paris
+      position: Master 2 Data Science
+      start_date: 2026-09
+      end_date: present
+      location: Palaiseau
+      summary: IA avancée (texte et graphe), Modèles de Markov cachés (HMM), Modèles génératifs, Transport optimal, Imagerie médicale, Representation Learning, Sequential Learning and aggregation.
+    - company: Université de Lille 
+      position: Master 2 Mathématiques Recherche (Double diplôme)
+      start_date: 2025-09
+      end_date: 2026-09
+      location: Villeneuve d'Ascq
+      summary: Processus stochastiques, Mouvement brownien, Martingales, Formule d'Itô, Topologie, Mesure complexe, Processus ponctuels déterminantaux (DPP).
+    - company: École Centrale de Lille
+      position: Parcours Science des Données et Intelligence Artificielle et filière Recherche
+      start_date: 2022-09
+      end_date: 2026-09
+      location: Villeneuve d'Ascq
+      summary: Apprentissage statistique, Estimation fréquentiste et bayésienne, Machine Learning, Deep Learning, Méthodes de Monte Carlo, Chaînes de Markov, Computer Vision, Reinforcement Learning.
+    - company: EPFL
+      position: Échange académique semestriel dans le Master Data Science
+      start_date: 2025-02
+      end_date: 2025-07
+      location: Lausanne, Suisse
+      summary: Statistiques, Optimisation, NLP, LLMs, RAG, Big Data, Stream Processing, Network Machine Learning.
+    - company: Lycée Marcelin Berthelot
+      position: CPGE MPSI-MP
+      start_date: 2020-09
+      end_date: 2022-09
+      location: Saint-Maur-des-Fossés
+      summary: Classe préparatoire aux grandes écoles (MPSI/MP).
+      highlights: null
+    expériences_professionnelles:
+    - company: BNP Paribas Cardif
+      position: Data Scientist
+      start_date: 2026-04
+      end_date: 2026-09
+      location: Nanterre
+      highlights:
+      - Analyse statistique de produits d'assurance pour des crédits renouvelables (ADE CR) avec SAS.
+      - Optimisation d'un pipeline de suivi des performances, volume des sorties réduit jusqu'à 85%.
+    - company: Quicksign
+      position: Data Analyst / Analytics Engineer
+      start_date: 2024-09
+      end_date: 2025-02
+      location: Paris
+      highlights:
+      - Amélioration d'un pipeline ETL dbt d'environ 30 étapes et conception de dashboards décisionnels.
+      - Étude d'un algorithme anti-fraude basé sur des graphes.
+    - company: IEMN
+      position: Assistant de recherche
+      start_date: 2024-02
+      end_date: 2024-07
+      location: Villeneuve d'Ascq
+      highlights:
+      - Recherche sur les ondes acoustiques de surface et amélioration d'une interface graphique d'automatisation de mesures.
+    projets:
+    - name: Mémoire de Master 2 - Tests d'hypothèses quantiques (Laboratoire CRIStAL)
+      start_date: 2025-10
+      end_date: 2026-09
+      highlights:
+      - Exploration des cadres bayésien et de Neyman-Pearson pour les tests d'hypothèses quantiques.
+      - Étude des bornes de Helstrom et de Chernoff pour la discrimination d'états quantiques.
+      - Co-auteur d'un article sur les états quantiques circulaires (en cours d'examen pour ICASSP 2027).
+    - name: Projet de groupe sur l'iatrogénie médicamenteuse (École Centrale de Lille)
+      start_date: 2022-09
+      end_date: 2024-02
+      highlights:
+      - Développement d'un modèle de prédiction d'IA avec la méthode Granular Computing pour atténuer l'iatrogénie médicamenteuse.
+      - Étude de la base MIMIC-III contenant les données cliniques de plus de 40 000 patients.
+    compétences:
+    - label: Langages de programmation
+      details: Python, C, SQL, Java, LaTeX, OCaml
+    - label: Librairies / Frameworks
+      details: NumPy, Pandas, TensorFlow, PyTorch, PySpark, Scikit-learn, SciPy
+    - label: Stack technique
+      details: Git, Docker, PostgreSQL, dbt, MySQL, SAS, MongoDB, Metabase, Tableau
+    - label: Langues
+      details: Français (Maternelle), Anglais (B2, TOEIC - 920), Espagnol (A2)
+    - label: Soft skills
+      details: Enthousiasme, Esprit d'équipe, Dynamisme, Capacité d'analyse, Rigueur, Adaptabilité, Sens de l'organisation, Curiosité
+    - label: Centres d'intérêt
+      details: Sports (Football, Basket-ball, Volley-ball, Ultimate, Course à pied), Cinéma (Thriller, Drame, Science-fiction), Animation japonaise, Univers vidéoludique, Jeux de société, Nouvelles technologies
