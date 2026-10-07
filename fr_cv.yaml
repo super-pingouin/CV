@@ -1,8 +1,9 @@
 cv:
   name: Yémalin AWHANSOU
-  headline: Applied Scientist Internship
+  headline: Applied Scientist
   location: Palaiseau, 91120
   email: john.doe@email.com
+  photo: photos\photo.jpg
   phone: "+33-6-00-00-00-01"
   social_networks:
   - network: LinkedIn

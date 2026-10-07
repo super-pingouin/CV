@@ -1,6 +1,6 @@
 cv:
   name: Yémalin AWHANSOU
-  headline: Applied Scientist Internship
+  headline: Student Researcher
   location: Palaiseau, 91120
   email: john.doe@email.com
   photo: photos\photo.jpg
@@ -42,7 +42,7 @@ cv:
       start_date: 2025-02
       end_date: 2025-07
       location: Lausanne, Switzerland
-      summary: Statistics, Optimization, Natural Language Processing (NLP), Large Language Models (LLMs), RAG, Big Data, Network Machine Learning.
+      summary: Statistics, Optimization, NLP, LLMs, RAG, Big Data, Stream Processing, Network Machine Learning.
     - company: Lycée Marcelin Berthelot
       position: CPGE MPSI-MP
       start_date: 2020-09
@@ -102,4 +102,4 @@ cv:
       details: Friendly, Dynamic, Team spirit, Motivated, Analytical skills, Rigour,
         Adaptability, Well-organized, Curiosity
     - label: Personal Interests
-      details: Sports (Basketball, Football, Volleyball, Running), Cinema (Thriller,Drama, Science-fiction), Japanese anime, Video game universe, Board games, New technologies
+      details: Sports (Basketball, Football, Volleyball, Running, Ultimate), Cinema (Thriller,Drama, Science-fiction), Japanese anime, Video game universe, Board games, New technologies

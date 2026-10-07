@@ -53,7 +53,10 @@ def generer_cv(lang: str, base_dir: Path, build_dir: Path):
     """ Génère un cv dans le dossier build_dir en fonction de la langue choisie 
     à partir des documents présents dans base_dir."""
 
-    full_cv_path = build_dir / f"full_cv_{lang}.yaml"
+    lang_build_dir = build_dir / lang
+    lang_build_dir.mkdir(parents=True, exist_ok=True)
+
+    full_cv_path = lang_build_dir / f"full_cv_{lang}.yaml"
 
     # Fichiers YAML à charger et fusionner selon la langue choisie
     files_to_merge = [
@@ -84,7 +87,7 @@ def generer_cv(lang: str, base_dir: Path, build_dir: Path):
     if original_photo:
         src = base_dir / original_photo
         if src.exists():
-            dst = build_dir / f"{src.stem}_carre.png"
+            dst = lang_build_dir / f"{src.stem}_carre.png"
             cv["photo"] = str(prepare_photo(src, dst).resolve())
 
     # Sauvegarde dans le dossier build
