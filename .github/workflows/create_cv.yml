@@ -27,11 +27,11 @@ jobs:
 
       - name: Run CV generator script
         run: python create_cv.py --all
-
+      
       # Télécharge le contenu de build/ comme artefact privé (non commité sur le dépôt)
       - name: Upload generated PDF as private artifact
         uses: actions/upload-artifact@v4
         with:
-          name: cv-pdf
+          name: cv-pdfs
           path: build/**/*.pdf
           retention-days: 1
