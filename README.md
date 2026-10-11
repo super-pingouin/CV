@@ -1,26 +1,28 @@
-# Générateur de CV avec RenderCV — Données sécurisées
+# Générateur de CV bilingue avec RenderCV — Données sécurisées
 
-Ce projet permet de générer un CV au format PDF basé sur **RenderCV**. Il permet de conserver le code source et la structure sur GitHub tout en gardant certaines données confidentielles au choix (email, téléphone, photo) en local. Il permet également de changer la forme de la photo du CV, par défaut la forme est circulaire.
+Ce projet permet de générer des CV en français et en anglais au format PDF basés sur **RenderCV**. Il permet de conserver le code source et la structure sur GitHub tout en gardant certaines données confidentielles au choix (email, téléphone, photo) en local. Il permet également de changer la forme de la photo du CV (cercle, carré, arrondi), par défaut la forme est circulaire.
 
 ---
 
 ## 📁 Architecture du projet
 
 ```
-.
-├── cv.yaml               # CV public
+
+├── fr_cv.yaml              # CV public en français
+├── en_cv.yaml              # CV public en anglais
 ├── config/
-│   ├── design.yaml       # Style visuel (polices, marges, couleurs)
-│   ├── locale.yaml       # Langue des intitulés
-│   └── settings.yaml     # Paramètres de build (dossier de sortie)
-├── private/              # 🔒 Dossier ignoré par Git (Données strictement locales)
-│   ├── secrets.yaml      # Champs privés (email, téléphone)
-│   └── photo.jpg          # Photo personnelle
-├── build/                # Artefacts générés (PDF, LaTeX)
-├── create_cv.py           # Script Python de fusion et de compilation
-├── .gitignore             # Masque les dossiers private/ et build/
+│   ├── fr_design.yaml      # Style visuel (FR)
+│   ├── fr_locale.yaml      # Intitulés (FR)
+│   ├── en_design.yaml      # Style visuel (EN)
+│   ├── en_locale.yaml      # Intitulés (EN)
+│   └── settings.yaml       # Paramètres de build identiques (FR/EN)
+├── private/                # 🔒 Dossier ignoré par Git (Données strictement locales)
+│   ├── secrets.yaml        # Champs privés (email, téléphone)
+│   └── photo.jpg           # Photo personnelle
+├── build/                  # Artefacts générés par langue (build/fr/, build/en/)
+├── create_cv.py            # Script Python de fusion et de compilation
+├── .gitignore              # Masque les dossiers private/ et build/
 └── README.md
-```
 
 ---
 
@@ -69,11 +71,25 @@ Toutes les clés spécifiées dans ce fichier remplaceront automatiquement les v
 
 ## ⚙️ Exécution en local
 
+Pour générer uniquement le fichier français :
+
 ```bash
-python create_cv.py
+python create_cv.py --lang fr 
 ```
 
-Le fichier PDF final sera compilé et enregistré dans le dossier `build/render_cv_output`.
+Pour générer uniquement le fichier français :
+
+```bash
+python create_cv.py --lang en
+```
+
+Pour générer le CV en français et en anglais :
+
+```bash
+python create_cv.py --all
+```
+
+Les fichiers finaux et intermédiaires seront rangés dans build/fr/ et build/en/.
 
 ---
 
@@ -81,8 +97,8 @@ Le fichier PDF final sera compilé et enregistré dans le dossier `build/render_
 
 | Fichier | Rôle |
 |---|---|
-| `config/design.yaml` | Polices, marges, couleurs, mise en page générale du CV |
-| `config/locale.yaml` | Langue des intitulés (ex. « Expérience », « Formation ») |
+| `config/*_design.yaml` | Polices, marges, couleurs, mise en page générale du CV |
+| `config/*_locale.yaml` | Langue des intitulés (ex. « Expérience », « Formation ») |
 | `config/settings.yaml` | Paramètres de build (dossier de sortie, options de compilation) |
 
 Modifiez ces fichiers pour adapter le rendu sans toucher au contenu du CV lui-même (`cv.yaml`).
