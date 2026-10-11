@@ -2,8 +2,6 @@
 
 Ce projet permet de générer des CV en français et en anglais au format PDF basés sur **RenderCV**. Il permet de conserver le code source et la structure sur GitHub tout en gardant certaines données confidentielles au choix (email, téléphone, photo) en local. Il permet également de changer la forme de la photo du CV (cercle, carré, arrondi), par défaut la forme est circulaire.
 
----
-
 ## 📁 Architecture du projet
 
 ```
@@ -24,7 +22,7 @@ Ce projet permet de générer des CV en français et en anglais au format PDF ba
 ├── .gitignore              # Masque les dossiers private/ et build/
 └── README.md
 
----
+```
 
 ## ✅ Prérequis
 
@@ -49,8 +47,6 @@ Ce projet permet de générer des CV en français et en anglais au format PDF ba
    pip install -r requirements.txt
    ```
 
----
-
 ## 🔒 Configuration du fichier `private/secrets.yaml`
 
 Pour ajouter ou masquer uniquement vos coordonnées personnelles, créez le fichier `private/secrets.yaml` :
@@ -66,8 +62,6 @@ cv:
 Toutes les clés spécifiées dans ce fichier remplaceront automatiquement les valeurs correspondantes de `cv.yaml` lors de l'exécution de `create_cv.py`.
 
 > ⚠️ Ce fichier n'est jamais versionné : il est explicitement listé dans `.gitignore`. Vous pouvez donc versionner `cv.yaml` avec des valeurs génériques ou vides pour ces champs, en toute sécurité.
-
----
 
 ## ⚙️ Exécution en local
 
@@ -90,8 +84,6 @@ python create_cv.py --all
 ```
 
 Les fichiers finaux et intermédiaires seront rangés dans build/fr/ et build/en/.
-
----
 
 ## 🎨 Personnalisation
 
