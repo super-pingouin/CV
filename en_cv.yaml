@@ -3,7 +3,7 @@ cv:
   headline: Student Researcher
   location: Palaiseau, 91120
   email: john.doe@email.com
-  photo: photos\photo.jpg
+  photo: photos/photo.jpg
   phone: "+33-6-00-00-00-01"
   social_networks:
   - network: LinkedIn
