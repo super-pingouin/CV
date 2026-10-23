@@ -2,8 +2,8 @@ design:
   theme: classic
   page:
     size: us-letter
-    top_margin: 0.4in
-    bottom_margin: 0.4in
+    top_margin: 0.35in
+    bottom_margin: 0.35in
     left_margin: 0.5in
     right_margin: 0.5in
     show_footer: true
@@ -28,7 +28,7 @@ design:
       connections: Source Sans 3
       section_titles: Source Sans 3
     font_size:
-      body: 10pt
+      body: 9.5pt
       name: 20pt
       headline: 10pt
       connections: 9pt
@@ -52,9 +52,9 @@ design:
     photo_position: left
     photo_space_left: 0.2cm
     photo_space_right: 0.2cm
-    space_below_name: 0.5cm
-    space_below_headline: 0.5cm
-    space_below_connections: 0.5cm
+    space_below_name: 0.4cm
+    space_below_headline: 0.4cm
+    space_below_connections: 0.4cm
     connections:
       phone_number_format: national
       hyperlink: true

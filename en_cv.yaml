@@ -1,6 +1,6 @@
 cv:
   name: Yémalin AWHANSOU
-  headline: Student Researcher
+  headline: Intern - Quantitative Research 
   location: Palaiseau, 91120
   email: john.doe@email.com
   photo: photos/photo.jpg
@@ -22,27 +22,25 @@ cv:
       start_date: 2026-09
       end_date: present
       location: Palaiseau
-      summary: Advanced AI for text and graphs, Hidden Markov Models, Generative Models, Optimal Transport, Representation Learning, Medical Imaging, Online learning and aggregation.
+      summary: HMM, Reinforcement Learning, Optimal Transport, Representation Learning, Sequential Learning.
     - company: Université de Lille 
       position: M.Sc. Mathematics (Double degree)
       start_date: 2025-09
       end_date: 2026-09
       location: Villeneuve d'Ascq
-      summary: Stochastic processes, Brownian motion, Martingales, Itô's formula,
-        Topology, Complex measure, Determinantal point processes (DPP).
+      summary: Stochastic processes, Brownian motion, Martingales, stochastic calculus (Itô), DPP.
     - company: École Centrale de Lille
       position: M.Eng. Data Science & AI (Major), Research Track (Minor)
       start_date: 2022-09
       end_date: 2026-09
       location: Villeneuve d'Ascq
-      summary: Statistical learning, Frequentist and Bayesian estimation, Machine
-        Learning, Deep Learning, Monte Carlo methods, Markov chains, Computer Vision, Reinforcement Learning.
+      summary: Statistical learning, Frequentist and Bayesian estimation, Machine Learning, Deep Learning (MLP, CNN, Transformers), Monte Carlo methods, Markov chains, Computer Vision, Generative models (Diffusion).
     - company: EPFL
       position: Academic exchange semester in Master Data Science
       start_date: 2025-02
       end_date: 2025-07
       location: Lausanne, Switzerland
-      summary: Statistics, Optimization, NLP, LLMs, RAG, Big Data, Stream Processing, Network Machine Learning.
+      summary: Statistics, Optimization, NLP, LLMs, RAG, Big Data, Stream Processing, Graph ML (GNN, GCN, GAT).
     - company: Lycée Marcelin Berthelot
       position: CPGE MPSI-MP
       start_date: 2020-09
@@ -58,8 +56,7 @@ cv:
       location: Nanterre
       highlights:
       - Analyzed insurance products for revolving credit (ADE CR) using SAS.
-      - Improved a performance tracking report pipeline, and reduced the
-        output dataset size by a factor of up to 7.
+      - Improved a performance-monitoring pipeline, with output volume reduced by up to 85%.
     - company: Quicksign
       position: Data Analyst / Analytics Engineer
       start_date: 2024-09
@@ -76,6 +73,18 @@ cv:
       highlights:
       - Conducted research on acoustic wave sensors, improved a GUI for measurement automation.
     projects:
+    - name: Dr Fine-RAG - Medical Text-Based Game (Ongoing personal project)
+      start_date: 2026-10
+      end_date:
+      highlights:
+      - Designed a medical text-based role-playing game using an open-source LLM (Mistral7B).
+      - Implemented a RAG pipeline and fine-tuned the model via QLoRA (Unsloth) using 4-bit quantization.
+      - Validated responses using an "LLM-as-a-judge" approach and deployed the application locally
+    - name: Brownian Watts - Predicting RTE Data with a Neural SDE (Ongoing personal project)
+      start_date: 2026-10
+      end_date:
+      highlights:
+      - Modeled time series data using a Neural SDE, based on energy production data from RTE.
     - name: M.Sc. in Mathematics Master's Thesis - Quantum Hypothesis Testing (CRIStAL Laboratory)
       start_date: 2025-10
       end_date: 2026-09
@@ -91,11 +100,11 @@ cv:
       - Studied the MIMIC-III database containing clinical data from over 40,000 patients.
     skills:
     - label: Programming
-      details: Python, C, SQL, Java, OCaml
+      details: Python, C, SQL, Java, LaTeX, OCaml
     - label: Frameworks
-      details: NumPy, Pandas, TensorFlow, PyTorch, PySpark, Scikit-learn, SciPy
-    - label: Tech stack
-      details: Git, Docker, PostgreSQL, dbt, MySQL, SAS, MongoDB, Metabase, Tableau
+      details: PyTorch, Hugging Face (Transformers, PEFT), LangChain, TensorFlow, NumPy, Pandas, Scikit-learn, SciPy, PySpark
+    - label: Tech Stack
+      details: Git, Docker, Linux, PostgreSQL, dbt, SAS, MongoDB, Power BI, ChromaDB, FastAPI, Streamlit
     - label: Languages
       details: French (Native), English (B2, TOEIC - 920), Spanish (A2)
     - label: Soft skills
