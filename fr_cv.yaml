@@ -1,6 +1,6 @@
 cv:
   name: Yémalin AWHANSOU
-  headline: Data Scientist / ML Engineer
+  headline: Data Scientist R&D – Stage de fin d'études (PFE)
   location: Palaiseau, 91120
   email: john.doe@email.com
   photo: photos/photo.jpg
@@ -13,7 +13,7 @@ cv:
   custom_connections: null
   sections:
     résumé:
-    - Ingénieur diplômé de Centrale Lille et actuellement étudiant au master Data Science de l'Institut Polytechnique de Paris, je suis à la recherche d'un stage de fin d'études de 4 à 6 mois à partir d'avril 2027.
+    - Ingénieur diplômé de Centrale Lille et actuellement étudiant au master Data Science de l'Institut Polytechnique de Paris, je suis à la recherche d'un stage de fin d'études de 4 à 6 mois à partir d'avril 2027 avec la volonté de le prolonger si l'opportunité se présente.
     formation:
     - company: Institut Polytechnique de Paris
       position: Master 2 Data Science
@@ -102,7 +102,7 @@ cv:
     - label: Frameworks
       details: PyTorch, Hugging Face (Transformers, PEFT), LangChain, TensorFlow, NumPy, Pandas, Scikit-learn, SciPy, PySpark
     - label: Stack technique
-      details: Git, Docker, Linux, PostgreSQL, dbt, SAS, MongoDB, Power BI, ChromaDB, FastAPI, Streamlit
+      details: Git, Docker, Linux, PostgreSQL, dbt, SAS, Domino Data Lab, MongoDB, Power BI, ChromaDB, FastAPI, Streamlit
     - label: Langues
       details: Français (Maternelle), Anglais (B2, TOEIC - 920), Espagnol (A2)
     - label: Soft skills

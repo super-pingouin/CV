@@ -1,6 +1,6 @@
 cv:
   name: Yémalin AWHANSOU
-  headline: Intern - Quantitative Research 
+  headline: Data Scientist R&D - Final Year Internship (April 2027)
   location: Palaiseau, 91120
   email: john.doe@email.com
   photo: photos/photo.jpg
@@ -15,7 +15,6 @@ cv:
     summary:
     - As an engineering graduate from École Centrale de Lille and currently a Data Science Master's student at Institut Polytechnique de Paris, I am seeking a 4-to-6-month final-year internship starting in 
       April 2027 in R&D within the fields of data science and AI.
-      
     education:
     - company: Institut Polytechnique de Paris
       position: M.Sc. Data Science
@@ -104,7 +103,7 @@ cv:
     - label: Frameworks
       details: PyTorch, Hugging Face (Transformers, PEFT), LangChain, TensorFlow, NumPy, Pandas, Scikit-learn, SciPy, PySpark
     - label: Tech Stack
-      details: Git, Docker, Linux, PostgreSQL, dbt, SAS, MongoDB, Power BI, ChromaDB, FastAPI, Streamlit
+      details: Git, Docker, Linux, PostgreSQL, dbt, SAS, Domino Data Lab, MongoDB, Power BI, ChromaDB, FastAPI, Streamlit
     - label: Languages
       details: French (Native), English (B2, TOEIC - 920), Spanish (A2)
     - label: Soft skills
